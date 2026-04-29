@@ -1,0 +1,48 @@
+<mat-card class="character-card">
+  <img
+    mat-card-image
+    class="character-image"
+    [alt]="character().name"
+    [src]="character().image"
+    loading="lazy"
+  />
+
+  <mat-card-header>
+    <mat-card-title>{{ character().name }}</mat-card-title>
+    <mat-card-subtitle>{{ character().species }}</mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content class="character-details">
+    <p><strong>{{ 'characters.fields.status' | translate }}:</strong> {{ character().status }}</p>
+    <p><strong>{{ 'characters.fields.gender' | translate }}:</strong> {{ character().gender }}</p>
+    <p><strong>{{ 'characters.fields.origin' | translate }}:</strong> {{ character().origin.name }}</p>
+    <p><strong>{{ 'characters.fields.location' | translate }}:</strong> {{ character().location.name }}</p>
+  </mat-card-content>
+
+  <mat-card-actions class="character-card-actions">
+    <a
+      mat-button
+      class="view-details-link"
+      color="primary"
+      [href]="character().url"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      {{ 'characters.actions.view-details' | translate }}
+    </a>
+
+    <span class="spacer"></span>
+
+    <button
+      mat-button
+      class="share-button"
+      type="button"
+      (click)="shareCharacter()"
+      [attr.aria-label]="'characters.actions.share-aria' | translate"
+    >
+      <mat-icon aria-hidden="true">share</mat-icon>
+      <span>{{ 'characters.actions.share' | translate }}</span>
+    </button>
+  </mat-card-actions>
+</mat-card>
+

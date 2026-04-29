@@ -1,0 +1,43 @@
+{
+  "app": {
+    "title": "Rick and Morty Explorer"
+  },
+  "characters": {
+    "title": "Personajes",
+    "subtitle": "Explora los seres más representativos del multiverso.",
+    "loading": "Cargando personajes...",
+    "empty": "No hay personajes disponibles.",
+    "fields": {
+      "status": "Estado",
+      "gender": "Género",
+      "origin": "Origen",
+      "location": "Ubicación"
+    },
+    "actions": {
+      "view-details": "Ver detalles del personaje",
+      "share": "Compartir personaje",
+      "share-aria": "Compartir personaje"
+    },
+    "share": {
+      "success": "Personaje compartido correctamente.",
+      "copied": "La URL del personaje se copió al portapapeles.",
+      "failed": "No se pudo compartir el personaje.",
+      "unavailable": "El navegador no permite compartir."
+    },
+    "error": {
+      "load-failed": "No se pudieron cargar los personajes. Inténtalo más tarde."
+    }
+  },
+  "footer": {
+    "copyright": "Copyright © 2026 Rick and Morty Explorer. All rights reserved.",
+    "developed-by": "Desarrollado por"
+  },
+  "language": {
+    "selector": "Selector de idioma",
+    "en": "Inglés",
+    "es": "Español"
+  },
+  "shared": {
+    "close": "Cerrar"
+  }
+}

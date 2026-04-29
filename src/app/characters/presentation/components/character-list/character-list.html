@@ -1,0 +1,8 @@
+<section class="character-grid" aria-label="{{ 'characters.title' | translate }}">
+  @for (character of characters(); track character.id) {
+    <app-character-card [character]="character" />
+  } @empty {
+    <p class="empty-state">{{ 'characters.empty' | translate }}</p>
+  }
+</section>
+

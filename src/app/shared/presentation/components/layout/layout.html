@@ -1,0 +1,34 @@
+<div class="layout-shell">
+  <mat-toolbar color="primary" class="app-toolbar">
+    <a class="brand" href="/" aria-label="Rick and Morty Explorer">
+      <img class="brand-logo" src="/rick-and-morty-logo.svg" alt="Rick and Morty Explorer logo" />
+      <span class="brand-title">{{ 'app.title' | translate }}</span>
+    </a>
+
+    <span class="spacer"></span>
+
+    <app-language-switcher />
+  </mat-toolbar>
+
+  <main class="content">
+    <header class="page-header">
+      <h1>{{ 'characters.title' | translate }}</h1>
+      <p>{{ 'characters.subtitle' | translate }}</p>
+    </header>
+
+    @if (loading()) {
+      <section class="state-panel" aria-live="polite">
+        <mat-progress-spinner diameter="48" mode="indeterminate" />
+        <p>{{ 'characters.loading' | translate }}</p>
+      </section>
+    } @else if (error()) {
+      <section class="state-panel state-panel--error" aria-live="assertive">
+        <p>{{ error() | translate }}</p>
+      </section>
+    } @else {
+      <app-character-list [characters]="characters()" />
+    }
+  </main>
+
+  <app-footer />
+</div>

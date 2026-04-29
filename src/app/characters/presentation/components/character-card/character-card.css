@@ -1,0 +1,38 @@
+.character-card {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.character-image {
+  height: 280px;
+  object-fit: cover;
+}
+
+.character-details {
+  display: grid;
+  gap: 0.5rem;
+  flex: 1 1 auto;
+}
+
+.character-details p {
+  margin: 0;
+}
+
+.character-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0 1rem 1rem;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.view-details-link,
+.share-button {
+  white-space: nowrap;
+}
+
